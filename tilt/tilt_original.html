@@ -2,10 +2,31 @@
 <html>
 <head>
   <style>
+    img {
+      width: 500;
+      height: 500;
+      box-shadow: 0px 0px 10px #00000030;
+      -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+      -webkit-transform: perspective(200px);
+          transform: perspective(200px);
+    }
+    
+    img > span {
+     display: block;
+     -webkit-transform: translateZ(50px) scale(0.6);
+          transform: translateZ(50px) scale(0.6);
+    }
+    
+    img:hover:after {
+     -webkit-transform: translateZ(-50px);
+        transform: translateZ(-50px);
+  }
+    
   </style>
 </head>
 <body>
-  <a data-tilt data-tilt-glare="true" data-tilt-transition="true" data-tilt-scale="1.1" class="c-logo" href=" " title="Tilt.js demo"><h1>This is something I want to tilt.</h1></a>
+  <a data-tilt data-tilt-glare="true" data-tilt-transition="true" data-tilt-scale="1.1" class="c-logo" href=" " title="Tilt.js demo"><img src="image.jpg"></a>
   <script type="text/javascript" src="vanilla-tilt.js"></script>
 </body>
 </html>
