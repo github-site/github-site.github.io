@@ -7,17 +7,30 @@
 		<meta name="description" content="Using tilt.js to add interactive effects to images." />
 		<link href="https://fonts.googleapis.com/css?family=Nunito:700,700italic,400,400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="assets/main.css" />
-		
+
 		<style>
 			img {
 				width: 100%;
 				height: 100%;
-				box-shadow: 0px 0px 10px #00000030;
+				/*box-shadow: 0px 0px 10px #00000030;*/
+				box-shadow: 0px 0px 25px #00000050;
 			}
-			
-			
+
+			.js-tilt-glare {
+				cursor: pointer;
+				opacity: 0.3;
+			}
+
+			li {
+				transition: 0.1s ease all;
+			}
+
+			li:active {
+				transform: scale(0.97);
+			}
+
 		</style>
-		
+
 	</head>
 	<body>
 		<div id="wrapper">
@@ -28,9 +41,9 @@
 					<div id="gallery01" class="gallery">
 						<div class="inner">
 							<ul>
-								<li>
+								<a href="https://example.com/"><li>
 									<div data-tilt data-tilt-scale="1.1" data-tilt-glare data-tilt-max-glare="0.8"><img src="assets/images/gallery01/d6c65cef.jpg" alt="Untitled" /></div>
-								</li><li>
+								</li></a><li>
 									<div data-tilt data-tilt-scale="1.1" data-tilt-glare data-tilt-max-glare="0.8"><img src="assets/images/gallery01/570bed0e.jpg" alt="Untitled" /></div>
 								</li><li>
 									<div data-tilt data-tilt-scale="1.1" data-tilt-glare data-tilt-max-glare="0.8"><img src="assets/images/gallery01/97036633.jpg" alt="Untitled" /></div>
